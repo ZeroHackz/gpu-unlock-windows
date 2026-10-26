@@ -1,0 +1,18 @@
+{
+  "device": "10de:2805",
+  "subsystem": "1458:4112",
+  "bdf": "0000:0b:00.0",
+  "chip": "196000a1",
+  "bar0": "fb000000",
+  "full_rom_sha256": "ebb63e82992d07e04da1e22ff78e855ce136c0702ee1909b2fb5d8c1e2f0674a",
+  "rom_view_bytes": 879616,
+  "accepted_fb_mib_register_values": [
+    "0x3ffc"
+  ],
+  "observed_fb_mib_RUN02": 16380,
+  "rom_view_offset_in_full_file": 37888,
+  "prom_bar_offset": "0x300000",
+  "prom_view_offset": 0,
+  "prom_view_sha256": "603baffea2842b3d553e766146f498bff26413b9868f67f6b650aaaa37005526",
+  "observed_RUN04_full_prom_sha256": "43240cdcb3d883b84b8d78292a0bd3e61529a7543e4288a701331133ebc83d6a"
+}

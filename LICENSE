@@ -1,0 +1,20 @@
+GNU GENERAL PUBLIC LICENSE
+Version 2, June 1991
+
+This project is distributed under the GNU General Public License version 2
+(GPL-2.0-only), inherited from the upstream projects:
+
+  - gpu-unlock-ada (JustAResearcher)   — GPL-2.0-only
+  - gpu-unlock      (Zagitta)          — GPL-2.0-only
+  - AD103_win_unlocker (TOTORONG)      — GPL-2.0-only
+
+See src/LICENSES/ for the full license texts and third-party notices, and
+the upstream projects for the canonical LICENSE files.
+
+NVIDIA firmware remains under its own terms; see src/LICENSES/NVIDIA-*.txt
+and src/firmware-tools/NOTICE.md. No NVIDIA firmware is redistributed here.
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+more details.

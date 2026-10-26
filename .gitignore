@@ -1,0 +1,21 @@
+# build artifacts
+src/build-*.json
+src/USB/
+src/local/
+src/build-deb/
+src/build/rpm/
+src/build/
+src/test-build/
+*.efi
+*.EFI
+*.o
+*.obj
+
+# python
+__pycache__/
+*.pyc
+
+# firmware / captured artifacts (never commit)
+*.rom
+PROM.BIN
+local/
