@@ -18,10 +18,11 @@ typedef struct {
   BOOLEAN is_display;
   const char *label;
 } GU_CARD;
-extern GU_CARD GuCards[2];
+#define GU_CARD_COUNT 1U
+extern GU_CARD GuCards[GU_CARD_COUNT];
 extern GU_CARD *GuCard;
 #define GU_BOARD_ID (0x10deU | ((UINT32)GuCard->device << 16))
-#define GU_BOARD_SUBSYSTEM 0x41121458U
+#define GU_BOARD_SUBSYSTEM 0x41231458U
 #define GU_BOARD_CHIP 0x196000a1U
 typedef struct GU_DMA GU_DMA;
 struct GU_DMA {

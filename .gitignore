@@ -12,6 +12,7 @@ src/test-build/
 *.obj
 
 # python
+venv/
 __pycache__/
 *.pyc
 

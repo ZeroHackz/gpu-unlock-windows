@@ -1,15 +1,11 @@
 #include "port.h"
-GU_CARD GuCards[2] = {
-  { 0x2805U, 0x0BU, 0xfb000000U, 0x1000000U, 0x25e00U,
-    "c006110391007b2bccaa480853f945d01b9a65a0cdb5fcfe8a359d5b4bb231dc",
-    0x3ffcU, 0x3U,
-    "53715948eb1a13aa9352e4602626abf4b6db9b8f9e09dea269d5d3b3f41394b0",
-    TRUE, "2805/0B" },
-  { 0x2803U, 0x0CU, 0xf9000000U, 0x1000000U, 0x24c00U,
-    "17a5f984269861b5c5cfa406c5e1f48ceb595ad5fb228d13697133683846c03a",
-    0x3ffcU, 0x0U,
-    "7391b56bd77bd20525dde1ce082dc18a5304964e10565b9fb5319c13076d18cd",
-    FALSE, "2803/0C" },
+/* Local Gigabyte 4060 Ti 16 GB (1458:4123, bus 01), values from capture RUN00. */
+GU_CARD GuCards[GU_CARD_COUNT] = {
+  { 0x2805U, 0x01U, 0x53000000U, 0x1000000U, 0x24c00U,
+    "ba9d105f319ab7927f03606f6811edc6e05f8b6ee06d71522f3f8c88ec673023",
+    0x3ffcU, 0x7U,
+    "c99af86fe60fe849f4c730bd47d1c30622c411c4f00f151165f302d88d84533a",
+    TRUE, "2805/01" },
 };
 GU_CARD *GuCard = &GuCards[0];
 VOID *memset(VOID *, int, size_t);

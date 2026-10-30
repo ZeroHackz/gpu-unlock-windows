@@ -369,9 +369,9 @@ EFI_STATUS EFIAPI EfiMain(EFI_HANDLE Image,EFI_SYSTEM_TABLE *St) {
   if(EFI_ERROR(status) || bytes!=1 || secure){status=EFI_SECURITY_VIOLATION;goto finish;}
   status=Step(status);if(EFI_ERROR(status))goto finish;
   Stage="watchdog";status=Step(Gu.bs->SetWatchdogTimer(0,0,0,NULL));if(EFI_ERROR(status))goto finish;
-  { static const UINTN ordem[2]={1,0};
-    for(UINTN ci=0;ci<2;ci++) {
-      GuCard=&GuCards[ordem[ci]];
+  /* Last entry first: the display card is GuCards[0] and must run last. */
+  { for(UINTN ci=GU_CARD_COUNT;ci-->0;) {
+      GuCard=&GuCards[ci];
       GuInit(St->BootServices,NULL);Gu.image=Image;Gu.display_check=DisplayCheck;
       memset(InitialConfig,0,sizeof(InitialConfig));
       memset(&PendingOwner,0,sizeof(PendingOwner));
