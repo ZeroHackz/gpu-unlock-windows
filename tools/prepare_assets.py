@@ -11,6 +11,11 @@ run(f/'fetch_artifacts.py',cache)
 run(f/'generate_v67.py',cache/entries[2]['filename'],out)
 run(f/'extract_boot_assets.py',cache/entries[0]['filename'],out,'--arch','ad102','--gsp',out/'gsp_ga10x.bin')
 (out/'v67-ga102-610.43.03.bin').unlink(missing_ok=True)
+# The four-PLM payload is a fixed byte layout; ad102_payload.main() also needs an
+# envydis listing for its audit, so write payload() directly. The manifest hash
+# check below still pins the exact bytes.
+sys.path.insert(0,str(f));from ad102_payload import payload
+(out/'v67-ad102-610.43.03-four-plm.bin').write_bytes(payload())
 import hashlib
 spec=json.loads((r/'ASSETS-MANIFEST.json').read_text())
 for name,entry in spec.items():
